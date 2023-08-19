@@ -7,7 +7,7 @@ import { StateService } from 'src/app/services/state.service';
 @Component({
   selector: 'app-form-order',
   templateUrl: './form-order.component.html',
-  styleUrls: ['./form-order.component.scss']
+  styleUrls: ['./form-order.component.scss', './form-order-2.component.scss']
 })
 export class FormOrderComponent {
   theme !: Observable<boolean>

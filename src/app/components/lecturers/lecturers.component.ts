@@ -7,7 +7,7 @@ import { BlockScrollStrategy } from '@angular/cdk/overlay';
 @Component({
     selector: 'app-lecturers',
     templateUrl: './lecturers.component.html',
-    styleUrls: ['./lecturers.component.scss'],
+    styleUrls: ['./lecturers.component.scss','./lecturers-2.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 export class LecturersComponent implements AfterViewInit {
