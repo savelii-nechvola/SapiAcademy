@@ -1,0 +1,85 @@
+<section id="lecturers">
+    <div class="tagline" [ngClass]="{'dark-tagline' : (theme | async), 'light-tagline' : !(theme | async)}">
+        <p class="m-0">
+            Викладачі
+        </p>
+    </div>
+    <div>
+        <ngb-carousel *ngIf="lecturers" [interval]="10000000" class="py-5" >
+            <ng-template *ngFor="let lect of lecturers" ngbSlide >
+                <div class="d-flex justify-content-center slide-box" >
+                    <div class="row w-75 lect-wrapper">
+                        <div class="col-4 ps-0">
+                            <div class="lectur-image-wrapper">
+                                <img [src]="lect.image">
+                            </div>
+                        </div>
+                        <div class="col-8 px-5 pt-5"
+                            [ngClass]="{'dark-info' : (theme | async), 'light-info' : !(theme | async)}">
+                            <div class="rob-bold">
+                                <p>
+                                    Досвід роботи: {{ lect.exp }} {{ lect.exp % 10 === 1 && lect.exp % 100 !== 11 ?
+                                    'рік' :
+                                    (lect.exp % 10 >= 2 && lect.exp % 10 <= 4 && (lect.exp % 100 < 10 || lect.exp % 100 >= 20) ?
+                                        'роки' : 'років') }}
+                                </p>
+                            </div>
+                            <div class="fullname kyiv-light-2 my-5">
+                                <p>
+                                    {{lect.surname}} {{lect.name}} {{lect.midname}}
+                                </p>
+                            </div>
+                            <div class="inter-bold mb-5">
+                                <p>
+                                    {{lect.description}}
+                                </p>
+                            </div>
+                            <div class="rob-regular">
+                                <p>
+                                    Предмети: <span *ngFor="let item of lect.courses; let i = index"> {{item}}
+                                        {{i==lect.courses.length-1?" ":", "}} </span>
+                                </p>
+                            </div>
+
+
+                        <div ngbAccordion >
+                            <div ngbAccordionItem class="my-5"
+                                [ngClass]="{'underline-dark' : (theme | async), 'underline-light' : !(theme | async), 'opened' : lect.isOpenCert}">
+                                <div  ngbAccordionHeader (click)="OpenCloseCert(lect)">
+                                    <button class="row justify-content-between cert-button" ngbAccordionButton>
+                                        <div  class="col-10 rob-medium">
+                                            <p class="m-0">
+                                                Сертифікати та публікації
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="circle-plus closed">
+                                                <div class="circle" [ngClass]="{'dark-plus' : (theme | async), 'light-plus' : !(theme | async)}">
+                                                  <div class="horizontal"></div>
+                                                  <div class="vertical"></div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div ngbAccordionCollapse>
+                                    <div ngbAccordionBody>
+                                        <ng-template>
+                                      <ul>
+                                        <li *ngFor="let cert of lect.certificate"> <a  class="inter-bold cert-links" (click)="OpenCertificate(cert)"> <p>{{cert.name}} {{cert.year}}</p> </a></li>
+                                      </ul>
+                                    </ng-template>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</section>

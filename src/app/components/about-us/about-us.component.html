@@ -1,0 +1,21 @@
+<section id="aboutus" class="mt-5">
+    <div class="row justify-content-between mb-5 top-text">
+        <div class="tagline col-4" [ngClass]="{'dark-tagline' : (theme | async), 'light-tagline' : !(theme | async)}">
+            <p>Чому саме ми?</p>
+        </div>
+        <div class="col-3 midpiec"></div>
+        <div class="goal col-5" [ngClass]="{'goal-dark' : (theme | async), 'goal-light' : !(theme | async)}">
+            <p>
+                Наша мета - забезпечити якісну освіту та підтримку студентів у їх навчанні та саморозвитку.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-end mt-5 bottom-text">
+        <div class="col-8 mt-5 about pt-3" [ngClass]="{'about-dark' : (theme | async), 'about-light' : !(theme | async)}">
+            <p>Наші курси розроблені досвідченими викладачами та експертами з відповідних галузей, що
+                дозволяє нам надати студентам високоякісний контент із актуальною та цікавою інформацією. Ми пропонуємо
+                різні формати навчання - від базових курсів для початківців до поглиблених програм для підготовки до
+                екзаменів.</p>
+        </div>
+    </div>
+</section>

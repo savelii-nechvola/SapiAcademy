@@ -1,0 +1,258 @@
+
+
+.navbar-nav {
+  align-items: center;
+}
+
+
+@media screen and (min-width: 768px) {
+  .navbar-brand img {
+    width: 180px;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+    padding: 0 1em;
+  }
+}
+
+.navbar {
+  padding: 0;
+
+}
+
+#theme-changer {
+  border: solid 8px rgba(255, 255, 255, 0.041);
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  display: block;
+  top: 1rem;
+  right: 5%;
+  
+  .dark-changer {
+    background-image: linear-gradient(180deg,
+        hsl(182deg 100% 50%) 0%,
+        hsl(177deg 100% 46%) 17%,
+        hsl(171deg 100% 44%) 33%,
+        hsl(162deg 92% 43%) 50%,
+        hsl(142deg 53% 50%) 67%,
+        hsl(110deg 44% 49%) 83%,
+        hsl(83deg 80% 35%) 100%);
+        box-shadow: 1px 1px 10px  hsl(182deg 100% 50%);
+        path{
+          fill:white;
+          transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+          path{
+            fill: #1D3637;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+  }
+
+  .light-changer {
+    background-image: linear-gradient(180deg,
+        hsl(182deg 100% 50%) 0%,
+        hsl(185deg 100% 50%) 11%,
+        hsl(188deg 100% 50%) 22%,
+        hsl(191deg 100% 50%) 33%,
+        hsl(194deg 100% 50%) 44%,
+        hsl(199deg 92% 55%) 56%,
+        hsl(206deg 83% 60%) 67%,
+        hsl(213deg 70% 62%) 78%,
+        hsl(223deg 55% 62%) 89%,
+        hsl(238deg 40% 62%) 100%);
+        box-shadow: 1px 1px 10px  #417679;
+        path{
+          fill:#1D3637;
+          transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+          path{
+            fill: white;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+  }
+}
+
+.dark-header {
+  a {
+    color: #6FCED1;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  a:hover{
+    color: #6BA312;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.light-header {
+
+  a {
+    transition: all 0.2s ease-in-out;
+    color: #1D3637;
+    cursor: pointer;
+  }
+  a:hover{
+    transition: all 0.2s ease-in-out;
+    color: #7678C4;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1140px) {
+  .navbar-brand img {
+    width: 180px;
+  }
+  .navbar .navbar-nav .nav-link {
+
+    font-size: 1.1em;
+    padding: 0px 1em;
+  }
+  #theme-changer{
+    border: solid 8px rgba(255, 255, 255, 0.041);
+    width: 56px;
+    height: 56px;
+    top:34px;
+    right: 2%;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1139px) {
+  .navbar-brand img {
+    width: 180px;
+  }
+
+  #Logo{
+    padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+
+    font-size: .9em;
+    padding: 0px 0.6em;
+  }
+  #theme-changer{
+    border: solid 8px rgba(255, 255, 255, 0.041);
+    width: 56px;
+    height: 56px;
+    top:34px;
+    right: 2%;
+  }
+  
+}
+
+@media screen and (min-width: 767px) and (max-width:849px) {
+  .navbar-brand img {
+    width: 130px;
+  }
+
+  #Logo{
+    padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+
+    font-size: .9em;
+    padding: 0px 0.6em;
+  }
+  #theme-changer{
+    border: solid 8px rgba(255, 255, 255, 0.041);
+    width: 56px;
+    height: 56px;
+    top:20px;
+    right: 2%;
+  }
+}
+
+@media screen and (min-width: 290px) and (max-width:766px) {
+  .navbar-brand img {
+    width: 130px;
+  }
+
+  #Logo{
+    padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+
+    font-size: .9em;
+    padding: 0px 0.6em;
+  }
+  #theme-changer{
+    border: solid 8px rgba(255, 255, 255, 0.041);
+    width: 56px;
+    height: 56px;
+    position: static;
+    display: block;
+  }
+  #navbarNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    ul, a{
+      margin-left: 1em !important;
+      margin-right: 1em !important;
+    }
+    margin-bottom: 15px;
+  }
+}
+
+
+@media screen and (min-width: 0px) and (max-width:289px) {
+  .navbar-brand img {
+    width: 90vw;
+  }
+  .navbar-brand{
+    margin: 0
+  }
+  .container-fluid{
+    margin-bottom: 20px;
+  }
+
+  #Logo{
+    padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+
+    font-size: .5em;
+    padding: 0px 0.6em;
+  }
+  #theme-changer{
+    border: solid 8px rgba(255, 255, 255, 0.041);
+    width: 30vw;
+    height: 30vw;
+    position: static;
+    display: block;
+  }
+  #navbarNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    ul, a{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    
+    margin-bottom: 15px;
+  }
+  .container-fluid{
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+}
+@media screen and (max-width:766px)
+{
+  .collapse:not(.show){
+    display: none !important;
+  }
+}
+

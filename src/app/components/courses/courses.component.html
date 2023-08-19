@@ -1,0 +1,22 @@
+<section id="courses" class="my-5 pb-5">
+    <div class="row justify-content-between">
+        <div class="col-xl-5 col-sm-4 col-3 underline"
+            [ngClass]="{'underline-dark' : (theme | async), 'underline-light' : !(theme | async)}">
+
+        </div>
+        <div class="col-xl-2 col-sm-4 col-6 tagline" [ngClass]="{'dark-tagline' : (theme | async), 'light-tagline' : !(theme | async)}">
+            <p>Курси</p>
+        </div>
+        <div class="col-xl-5 col-sm-4 col-3 underline"
+            [ngClass]="{'underline-dark' : (theme | async), 'underline-light' : !(theme | async)}">
+
+        </div>
+    </div>
+    <div class="m-5">
+        <div class="d-flex flex-row flex-wrap courses-wrapper py-5 px-4" [ngClass]="{'courses-wrapper-dark' : (theme | async), 'courses-wrapper-light' : !(theme | async)}">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 my-3 crs" *ngFor="let item of courses" >
+                <app-courses-item [coursesItem]="item"></app-courses-item>
+            </div>
+        </div>
+    </div>
+</section>

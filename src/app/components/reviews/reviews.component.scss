@@ -1,0 +1,56 @@
+.svg-wrapper{
+    width: fit-content;
+    svg{
+        &:hover{
+            cursor: default;
+        }
+    }
+}
+.inter-bold-comment{
+    p{
+        font-family: 'Inter';
+        font-size: 16pt;
+    }
+ }
+
+.review-dark{
+    color:white;
+}
+
+
+.tagline{
+    p{
+    font-family: 'KyivSerif-Regular3';
+    font-size: 38pt;
+    font-weight: 200;
+    letter-spacing: 2pt;
+    text-align: center;
+    }  
+}
+
+.dark-tagline{
+    p{
+        color: white;
+    }
+}
+
+.light-tagline{
+    p{
+        color: #1D3637;
+    }
+}
+
+
+.underline {
+    height: 3em;
+}
+
+.underline-dark {
+    color: #FFFFFF;
+    border-bottom: solid 1px hsla(83, 80%, 35%, 0.6);
+}
+
+.underline-light {
+    color: #1D3637;
+    border-bottom: solid 1px hsla(238, 40%, 62%, 0.6);
+}

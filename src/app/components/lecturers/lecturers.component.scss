@@ -1,0 +1,288 @@
+.tagline{
+    p{
+    font-family: 'KyivSerif-Regular3';
+    font-size: 48pt;
+    font-weight: 200;
+    letter-spacing: 2pt;
+    text-align: center;
+    }  
+}
+
+.dark-tagline{
+    p{
+        color: white;
+    }
+}
+
+.light-tagline{
+    p{
+        color: #1D3637;
+    }
+}
+
+.carousel-control-prev-icon{
+    background-image: url('../../../assets/Icons/left-arrow.svg');
+ }
+ .carousel-control-next-icon{
+   background-image: url('../../../assets/Icons/right-arrow.svg');
+ }
+
+ .carousel-control-prev-icon-dark{
+    background-image: url('../../../assets/Icons/left-arrow-dark.svg');
+ }
+ .carousel-control-next-icon-dark{
+    background-image: url('../../../assets/Icons/right-arrow-dark.svg');
+ }
+ 
+
+ .rob-bold{
+    p{
+        font-family: 'Roboto';
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+ }
+
+ .kyiv-light-2{
+    p{
+        font-family: 'KyivTypeSerif-Light2';
+        font-size: 36pt;
+        line-height: 38pt;
+        text-align: center;
+    }
+ }
+
+ .inter-bold{
+    p{
+        font-family: 'Inter';
+        font-size: 12pt;
+        letter-spacing: 0.5px;
+    }
+ }
+
+ .rob-regular{
+    p{
+        font-family: 'Roboto-Regular';
+        font-size: 14pt;
+    }
+ }
+
+ .rob-medium{
+    p{
+        font-family: 'Roboto-Medium';
+        font-size: 16pt;
+        letter-spacing: 1px;
+    }
+ }
+
+ .underline-dark{
+    border-bottom: solid 1px hsla(83, 80%, 35%, 0.6);
+ }
+
+ .underline-light{
+    border-bottom: solid 1px hsla(238, 40%, 62%, 0.6);
+ }
+
+ .light-info{
+    p{
+        color: #1D3637;
+    }
+    .rob-regular{
+        p{
+            color: #616297;
+        }
+    }
+    a{
+
+        transition: color 0.1s ease-in-out;
+        text-decoration: underline;
+        text-decoration-color: #616297;
+        -webkit-text-decoration-color: #616297;
+        :hover{
+            color:#616297;
+            transition: color 0.1s ease-in-out;
+        }
+    }
+    a:hover{
+        text-decoration-color: #616297;
+        -webkit-text-decoration-color: #616297;
+    }
+ }
+
+ .dark-info{
+    p{
+        color: #ffffff;
+    }
+    .rob-regular{
+        p{
+            color: #6BA312;
+        }
+    }
+    li::marker{
+        color:#6BA312
+    }
+    a{
+
+        transition: color 0.1s ease-in-out;
+        text-decoration-color: #ffffff;
+        -webkit-text-decoration-color: #ffffff;
+        :hover{
+            color:#6BA312;
+            transition: color 0.1s ease-in-out;
+        }
+    }
+    a:hover{
+        text-decoration-color: #6BA312 !important;
+        -webkit-text-decoration-color: #6BA312 !important;
+    }
+ }
+
+ .lect-wrapper{
+    background-color: hsla(0, 0%, 85%, 0.2);
+    border: solid 1px hsla(0, 0%, 0%, 0.600)
+ }
+
+ .lectur-image-wrapper{
+    width:330px; 
+    height: 460px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+ }
+
+
+
+
+
+
+ .closed {
+    .vertical {
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease-in-out;
+      transform: rotate(-90deg);
+    }
+    .horizontal {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease-in-out;
+      transform: rotate(-90deg);
+      opacity: 1;
+    }
+  }
+  
+  .opened {
+    opacity: 1;
+    .vertical {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease-in-out;
+      transform: rotate(90deg);
+    }
+    .horizontal {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease-in-out;
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+  }
+  
+  .circle-plus {
+      height: 2.5em;
+      width: 2.5em;
+      font-size: 1em;
+      opacity: .7;
+  }
+  
+  .circle-plus .circle {
+      position: relative;
+      width: 2.55em;
+      height: 2.5em;
+  }
+  .circle-plus .circle .horizontal {
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      left: 50%;
+      margin-left: -15px;
+      top: 50%;
+      margin-top: -1.5px;
+  }
+  .circle-plus .circle .vertical {
+      position: absolute;
+      width: 3px;
+      height: 30px;
+      left: 50%;
+      margin-left: -1.5px;
+      top: 50%;
+      margin-top: -15px;
+  }
+  
+  
+  .dark-plus{
+    div{
+        background-color: #6BA312;
+    }
+  }
+  .light-plus{
+    div{
+        background-color: #7678C4;
+    }
+    
+  }
+  
+  .slide-box{
+    min-height: 700px;
+    max-height: fit-content;
+  }
+
+  .accordion {
+    --bs-accordion-color: none;
+    --bs-accordion-bg: none;
+    --bs-accordion-transition: none;
+    --bs-accordion-border-color: none;
+    --bs-accordion-border-width: none;
+    --bs-accordion-border-radius: none;
+    --bs-accordion-inner-border-radius: none;
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-btn-color: none;
+    --bs-accordion-btn-bg: none;
+    --bs-accordion-btn-icon: none;
+    --bs-accordion-btn-icon-width: none;
+    --bs-accordion-btn-icon-transform:none;
+    --bs-accordion-btn-icon-transition: none;
+    --bs-accordion-btn-active-icon: none;
+    --bs-accordion-btn-focus-border-color: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-body-padding-x: 1.25rem;
+    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-active-color: none;
+    --bs-accordion-active-bg: none;
+}
+
+.accordion-body{
+    padding-top: 0;
+}
+
+.cert-links{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.cert-button{
+    &:hover{
+        .dark-plus{
+            div{
+                background-color: #bdff52;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease-in-out;
+            }
+        }
+        .light-plus{
+            div{
+                background-color: #373a8b;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease-in-out;
+            }
+        }
+    }
+}

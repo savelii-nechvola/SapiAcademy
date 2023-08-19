@@ -1,0 +1,91 @@
+<section class="mt-5">
+    <div class="form-title" [ngClass]="{'dark-title' : (theme | async), 'light-title' : !(theme | async)}">
+        <p>Залишилися запитання?</p>
+    </div>
+    <div class="d-flex justify-content-center mt-5 pt-5">
+        <div id="OrderForm" class="form-wrapper py-5 col-7">
+            <div class="invite-text" [ngClass]="{'dark-invite' : (theme | async), 'light-invite' : !(theme | async)}">
+                <p class="mb-5">
+                    Приєднуйся до нас
+                </p>
+            </div>
+            <div class="form-container ">
+                <form [formGroup]="orderForm" (ngSubmit)="submitForm()" class="row justify-content-center">
+                    <div class="col-10" [ngClass]="{'first-block-dark' : (theme | async), 'first-block-light' : !(theme | async)}">
+                        <div class="my-4">
+                            <input placeholder="Ім'я" type="text" id="name" formControlName="name">
+                            <div *ngIf="orderForm.get('name')?.hasError('required') && (orderForm.get('name')?.touched || formSubmitted)"
+                                class="error-message " [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                                Введення імені обов'язкове
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <input placeholder="Прізвище" type="text" id="surname" formControlName="surname">
+                            <div *ngIf="orderForm.get('surname')?.hasError('required') && (orderForm.get('surname')?.touched || formSubmitted)"
+                                class="error-message  " [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                                Введення прізвища обов'язкове
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <input placeholder="Пошта" type="email" id="email" formControlName="email">
+                            <div *ngIf="orderForm.get('email')?.hasError('email') && (orderForm.get('email')?.touched || formSubmitted)"
+                                class="error-message  " [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                                Помилковий формат електронної пошти
+                            </div>
+                            <div *ngIf="formSubmitted && orderForm.hasError('atLeastOneRequired')"
+                                class="error-message  " [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                                Введіть телефон або пошту
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <input placeholder="Телефон" type="tel" id="phone" formControlName="phone">
+                            <div *ngIf="orderForm.get('phone')?.hasError('pattern') && (orderForm.get('phone')?.touched || formSubmitted)"
+                                class="error-message  " [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                                Номер має починатися з + та містити хоча б 10 цифр
+                            </div>
+                            <div *ngIf="formSubmitted && orderForm.hasError('atLeastOneRequired')"
+                                class="error-message  " [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                                Введіть телефон або пошту
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-9" [ngClass]="{'middleline-dark' : (theme | async), 'middleline-light' : !(theme | async)}"></div>
+                    <div class="col-10 my-3 row subject-block">
+                        <div *ngFor="let subject of subjects" class="col-4 my-2"[ngClass]="{'form-check-dark' : (theme | async), 'form-check-light' : !(theme | async)}" >
+                            <input type="checkbox"  [id]="subject" [name]="subject"
+                                [formControlName]="subject" [ngClass]="{'custom-checkbox-dark' : (theme | async), 'custom-checkbox-light' : !(theme | async)}">
+                            <label [for]="subject">{{ subjectNames[subject] }}</label>
+
+                        </div>
+
+
+
+                        <div *ngIf="formSubmitted && orderForm.hasError('atLeastOneRequiredSubjects')"
+                            class="error-message" [ngClass]="{'text-warning' : (theme | async), 'text-danger' : !(theme | async)}">
+                            Має бути обрано принаймні один предмет.
+                        </div>
+                    </div>
+                    <div class="col-9" [ngClass]="{'middleline-dark' : (theme | async), 'middleline-light' : !(theme | async)}"></div>
+
+
+                    <div class="col-10 my-3 row" [ngClass]="{'third-block-dark' : (theme | async), 'third-block-light' : !(theme | async)}">
+                        <div [ngClass]="{'form-check-dark' : (theme | async), 'form-check-light' : !(theme | async)}" >
+                            <input type="checkbox" [ngClass]="{'custom-checkbox-dark' : (theme | async), 'custom-checkbox-light' : !(theme | async)}" id="dontCallMe" name="dontCallMe"
+                                formControlName="dontCallMe" style="width: auto;">
+                            <label for="dontCallMe">Не дзвонити (Звязатися через телеграм, вайбер, ватсап) </label>
+                        </div>
+                        <div class="my-4 ps-0">
+                            <textarea placeholder="Коментар" id="comment" formControlName="comment"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-10 text-center" [ngClass]="{'submit-button-dark' : (theme | async), 'submit-button-light' : !(theme | async)}">
+                        <button class="py-2 px-5" type="submit">Зв`язатися</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

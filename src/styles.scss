@@ -1,0 +1,74 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
+*{
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: #42777c;
+    
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #122122;
+    }
+    
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'KyivSerif';
+    src: url('../src/assets/fonts/KyivTypeSerif-VarGX.ttf');
+}
+
+@font-face {
+    font-family: 'KyivTitling';
+    src: url('../src/assets/fonts/KyivTypeTitling-VarGX.ttf');
+}
+
+@font-face {
+    font-family: 'KyivSerif-Regular3';
+    src: url('../src/assets/fonts/KyivTypeSerif-Regular3.ttf');
+}
+
+@font-face {
+    font-family: 'KyivSerif-Medium3';
+    src: url('../src/assets/fonts/KyivTypeSans-Medium3.ttf');
+}
+
+@font-face {
+    font-family: 'KyivSans-Regular2';
+    src: url('../src/assets/fonts/KyivTypeSans-Regular2.ttf');
+}
+@font-face {
+    font-family: 'KyivSerif-Regular2';
+    src: url('../src/assets/fonts/KyivTypeSerif-Regular2.otf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../src/assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('../src/assets/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'KyivTypeSerif-Light2';
+    src: url('../src/assets/fonts/KyivTypeSerif-Light2.otf');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../src/assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../src/assets/fonts/Roboto-Medium.ttf');
+}

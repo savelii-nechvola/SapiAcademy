@@ -1,0 +1,19 @@
+<div [ngClass]="{'dark' : (theme | async), 'light' : !(theme | async)}">
+    <div class="container-xl">
+        <app-header></app-header>
+        <app-introduction></app-introduction>
+        <app-about-us></app-about-us>
+    </div>
+     <!-- <div [ngClass]="{'dark-courses' : (theme | async), 'light-courses' : !(theme | async)}">
+        <div class="container">
+            <app-courses></app-courses>
+        </div>
+    </div> -->
+    <!-- <div class="container">
+        <app-lecturers></app-lecturers>
+        <app-reviews></app-reviews>
+        <app-form-order></app-form-order>
+        <app-to-start></app-to-start>
+        <app-footer></app-footer> 
+    </div> -->
+</div>

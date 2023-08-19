@@ -1,0 +1,40 @@
+<section id="reviews" class="mt-5">
+    <div class="row justify-content-between">
+        <div class="col-5">
+            <div class="underline"
+            [ngClass]="{'underline-dark' : (theme | async), 'underline-light' : !(theme | async)}">
+            
+        </div>
+    </div>
+        <div class="col-2 tagline" [ngClass]="{'dark-tagline' : (theme | async), 'light-tagline' : !(theme | async)}">
+            <p>Відгуки</p>
+        </div>
+        <div class="col-5">
+            <div class="underline"
+                [ngClass]="{'underline-dark' : (theme | async), 'underline-light' : !(theme | async)}">
+    
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-center">
+        <div [ngClass]="{'review-dark' : (theme | async), 'review-light' : !(theme | async)}" class="col-4 row justify-content-center px-4 my-5" *ngFor="let rev of ReviewsList">
+            <div class="svg-wrapper my-2">
+                
+                <svg width="131" height="120" viewBox="0 0 131 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29.5621 118.814C26.4018 120.388 22.8157 117.629 23.4543 114.107L30.2499 76.4994L1.40541 49.8162C-1.28827 47.3197 0.111787 42.7559 3.72246 42.2629L43.8247 36.7291L61.7062 2.32563C63.3191 -0.775211 67.683 -0.775211 69.296 2.32563L87.1774 36.7291L127.28 42.2629C130.89 42.7559 132.29 47.3197 129.589 49.8162L100.752 76.4994L107.548 114.107C108.186 117.629 104.6 120.388 101.44 118.814L65.4888 100.877L29.5621 118.814Z"
+                        [ngStyle]="{'fill': (theme | async) == true ? 'white' : '#1D3637'}" />
+                    
+                    <!-- Добавляем текст и центрируем его -->
+                    <text x="65.5" y="80" font-family="Roboto-Medium"  font-size="40"  text-anchor="middle" [ngStyle]="{'fill': (theme | async) == true ? '#1D3637':'white'}">
+                        {{rev.rate}}
+                    </text>
+                </svg>
+            </div>
+            <div class="text-center inter-bold-comment mt-5">
+                <p>
+                    {{rev.comment}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

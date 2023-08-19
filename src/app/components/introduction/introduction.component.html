@@ -1,0 +1,35 @@
+<section class="mt-5">
+    <div class="tagline" [ngClass]="{'dark-tagline' : (theme | async), 'light-tagline' : !(theme | async)}">
+        <p>Створи нову ступінь <br> еволюції</p>
+    </div>
+    <div class="d-flex flex-row fullwrapper">
+        <a href="#OrderForm"  [ngClass]="{'ToOrderForm-dark' : (theme | async), 'ToOrderForm-light' : !(theme | async)}">
+            <p class="text-center callme" ><span>З</span><span id="apostrof">В'</span><span>Я</span><span>З</span><span>А</span><span>Т</span><span>И</span><span>С</span><span>Я</span></p>
+            <div style="display: inline-block;">
+                <a class="d-block rounded-circle" id="smsButton">
+                    <div 
+                        [ngClass]="{'dark-messageButton' : (theme | async), 'light-messageButton' : !(theme | async)}"
+                        class="rounded-circle messageButton">
+                        <div class="svgWrapper">
+                            <svg class="smsSvg"  width="45" height="45" viewBox="0 0 45 45"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M39.375 0H5.625C2.51367 0 0 2.51367 0 5.625V28.125C0 31.2363 2.51367 33.75 5.625 33.75H16.875L13.1221 45L29.9971 33.75H39.375C42.4863 33.75 45 31.2363 45 28.125V5.625C45 2.51367 42.4863 0 39.375 0Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </a>
+        <div id="righthuinya" class="d-flex flex-row ms-5 mt-5">
+            <div class="text-center infoBlock"  [ngClass]="{'callme-dark' : (theme | async), 'callme-light' : !(theme | async)}">
+                Sapi Academy - це інноваційна онлайн-навчальна платформа, яка надає доступ до широкого спектру курсів з
+                різних предметів. Наша мета - забезпечити якісну освіту та підтримку студентів у їх навчанні та
+                саморозвитку.
+            </div>
+            <div class="turtle-wrapper">
+                <img src="../../../assets/Images/Turtle_introduction.png">
+            </div>
+        </div>
+    </div>
+</section>

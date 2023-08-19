@@ -1,0 +1,108 @@
+.firstrow-dark{
+    border-bottom: solid 1px #6BA312;
+}
+
+.firstrow-light{
+    border-bottom: solid 1px #7678C4;
+}
+
+.footer-dark{
+    *{
+        color:white; 
+    }
+}
+
+.footer-light{
+    *{
+        color:black; 
+    }
+}
+.Roboto-lig{
+    p{
+        font-family: 'Roboto-light';
+        font-size: 20px;
+    }
+    a{
+        font-family: 'Roboto-light';
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
+
+.Roboto-reg{
+    p{
+        font-family: 'Roboto-Regular';
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+}
+
+.contact-links{
+    a{
+        text-decoration: none;
+        
+    cursor: pointer;
+    }
+    
+}
+
+.contact-link-dark{
+    div{
+        a{
+            svg{
+                path{
+                    fill:white;
+                    transition: all 0.2s ease-in-out;
+                }
+                &:hover{
+                    path{
+                        transition: all 0.2s ease-in-out;
+                        fill: #6BA312;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.contact-link-light{
+    div{
+        a{
+            svg{
+                
+                path{
+                    transition: all 0.2s ease-in-out;
+                    fill:#1D3637;
+                }
+                &:hover{
+                    path{
+                        transition: all 0.2s ease-in-out;
+                        fill: #54568b;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-dark{
+    a{
+        transition: all 0.2s ease-in-out;
+    }
+    a:hover{
+        color:#6BA312;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+}
+.nav-light{
+    a{
+        transition: all 0.2s ease-in-out;
+    }
+    a:hover{
+        transition: all 0.2s ease-in-out;
+        color:#7678C4;
+        cursor: pointer;
+    }
+}
