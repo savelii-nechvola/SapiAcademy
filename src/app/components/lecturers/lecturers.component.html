@@ -9,12 +9,12 @@
             <ng-template *ngFor="let lect of lecturers" ngbSlide >
                 <div class="d-flex justify-content-center slide-box" >
                     <div class="row w-75 lect-wrapper">
-                        <div class="col-4 ps-0">
-                            <div class="lectur-image-wrapper">
+                        <div class="col-4 ps-0 med-w-100">
+                            <div class="lectur-image-wrapper med-w-100">
                                 <img [src]="lect.image">
                             </div>
                         </div>
-                        <div class="col-8 px-5 pt-5"
+                        <div class="col-8 px-5 pt-5 med-w-100"
                             [ngClass]="{'dark-info' : (theme | async), 'light-info' : !(theme | async)}">
                             <div class="rob-bold">
                                 <p>
@@ -52,7 +52,7 @@
                                                 Сертифікати та публікації
                                             </p>
                                         </div>
-                                        <div class="col-2">
+                                        <div class="col-2 midlspace">
                                             <div class="circle-plus closed">
                                                 <div class="circle" [ngClass]="{'dark-plus' : (theme | async), 'light-plus' : !(theme | async)}">
                                                   <div class="horizontal"></div>
