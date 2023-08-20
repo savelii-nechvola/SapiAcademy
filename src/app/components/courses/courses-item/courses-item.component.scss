@@ -169,7 +169,11 @@
 }
 
 @media screen and (min-width:326px) and (max-width:449px){
- 
+    .nothing{
+        p{
+            top:40%
+        }
+    }
     .card-wrapper{
         height:15rem;
     }
@@ -181,7 +185,7 @@
         
         padding: 7px !important;
         p {
-            font-size:  0.7rem;
+            font-size:  0.65rem;
         }
     }
     .name-wrapper{
@@ -195,6 +199,12 @@
 }
 
 @media screen and (min-width:300px) and (max-width:325px){
+    .nothing{
+        p{
+            top:30%
+        }
+    }
+
     .item-first-wrapper{
         height: 12rem;
         width: 8rem;
