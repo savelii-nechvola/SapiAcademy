@@ -149,3 +149,17 @@
         }
     }
 }
+
+
+@media screen and (max-width:575px) {
+    .form-title{
+        p{
+            font-size:40px;
+        }
+    }
+    .invite-text{
+        p{
+            font-size:26px;
+        }
+    }
+}

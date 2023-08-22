@@ -3,9 +3,9 @@
         <p>Залишилися запитання?</p>
     </div>
     <div class="d-flex justify-content-center mt-5 pt-5">
-        <div id="OrderForm" class="form-wrapper py-5 col-7">
+        <div id="OrderForm" class="form-wrapper py-5 col-lg-7 col-md-10 col-12">
             <div class="invite-text" [ngClass]="{'dark-invite' : (theme | async), 'light-invite' : !(theme | async)}">
-                <p class="mb-5">
+                <p class="mb-sm-5 mb-1">
                     Приєднуйся до нас
                 </p>
             </div>
@@ -53,7 +53,7 @@
 
                     <div class="col-9" [ngClass]="{'middleline-dark' : (theme | async), 'middleline-light' : !(theme | async)}"></div>
                     <div class="col-10 my-3 row subject-block">
-                        <div *ngFor="let subject of subjects" class="col-4 my-2"[ngClass]="{'form-check-dark' : (theme | async), 'form-check-light' : !(theme | async)}" >
+                        <div *ngFor="let subject of subjects" class="col-xl-4 col-md-6 col-12 my-2"[ngClass]="{'form-check-dark' : (theme | async), 'form-check-light' : !(theme | async)}" >
                             <input type="checkbox"  [id]="subject" [name]="subject"
                                 [formControlName]="subject" [ngClass]="{'custom-checkbox-dark' : (theme | async), 'custom-checkbox-light' : !(theme | async)}">
                             <label [for]="subject">{{ subjectNames[subject] }}</label>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-                    <div class="col-10 text-center" [ngClass]="{'submit-button-dark' : (theme | async), 'submit-button-light' : !(theme | async)}">
+                    <div class="col-10 p-0 text-center" [ngClass]="{'submit-button-dark' : (theme | async), 'submit-button-light' : !(theme | async)}">
                         <button class="py-2 px-5" type="submit">Зв`язатися</button>
                     </div>
                 </form>
