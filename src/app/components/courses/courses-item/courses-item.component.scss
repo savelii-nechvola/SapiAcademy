@@ -1,37 +1,62 @@
-.image-wrapper {
-    img {
-        width: 100%;
-        display: block;
-        margin: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        padding-top: 0;
+.card {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    height: 26rem;
+    width: auto;
+    perspective: 1000px;
 
-    }
+    border: none;
+}
+
+.card-inner {
+    background-size: cover !important;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
 }
 
 .name-wrapper {
-
-    text-align: center;
-
     p {
         font-family: 'Roboto-light';
         color: black;
-        font-size:  1.672rem;
+        font-size: 1.672rem;
     }
 }
 
-.item-first-wrapper {
-    background-size: contain !important;
-    border-radius: 5px;
-    position: relative;
-    width: 100%;
-    height: 26rem;
+.card-description {
+    p {
+        font-family: 'Roboto-Regular';
+        color: black;
+        font-size: 17px;
+    }
 }
-
-
-
 
 .nothing {
     position: relative;
@@ -47,149 +72,50 @@
     }
 }
 
-
-
-.wrapper-course-item, .card-wrapper {
-    position: relative;
-    width: 100%;
-    height: 26rem;
-}
-
-
-
-.front,
-.back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    overflow: hidden;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transition: transform 0.8s ease;
-}
-
-
-
-.front {
-    transform: perspective(600px) rotateY(0);
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.back {
-    transform: perspective(600px) rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-
-}
-
-.card {
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-  }
-  
-  .card:hover .front {
-    transform: perspective(600px) rotateY(-180deg);
-  }
-  
-  .card:hover .back {
-    transform: perspective(600px) rotateY(0);
-  }
-
-  .card-description{
-    p{
-        font-family: 'Roboto-Regular';
-        color:black;
-        font-size:18px;
-    }
-  }
-  
-  @media screen and (min-width:0px) and  (max-width:1199px){
-    .card-description{
+@media screen and (min-width:0px) and (max-width:1199px) {
+    .card-description {
         p {
-            font-size:  1rem;
-        }
-    }
-  }
-  @media screen and (min-width:1200px) and  (max-width:1399px)
-{
-    .front{
-        img{
-            width: 85%;
-        }
-    }
-    .back{
-        .item-first-wrapper{
-            width: 85%;
+            font-size: 1rem;
         }
     }
 }
 
+@media screen and (min-width:450px) and (max-width:767px) {
+    .card {
+        height: 30rem;
+    }
 
+    .card-img {
+        max-width: 20rem;
+    }
+}
 
-@media screen and (min-width:450px) and  (max-width:767px){
-    .card-description{
-        
-        padding-top: 0 !important;
+@media screen and (min-width:326px) and (max-width:449px) {
+    .nothing {
         p {
-            font-size:  1rem;
+            top: 40%
         }
     }
 
-    .front{
-        img{
-            width: 277px;
-        }
-    }
-    .back{
-        .item-first-wrapper{
-            width: 85%;
-        }
-    }
-}
-
-@media screen and (min-width:326px) and (max-width:449px){
-    .nothing{
-        p{
-            top:40%
-        }
-    }
-    .card-wrapper{
-        height:15rem;
-    }
-    .item-first-wrapper{
+    .card {
         height: 15rem;
-        width: 10rem;
     }
-    .card-description{
-        
+
+    .card-img {
+        max-width: 10rem;
+    }
+
+    .card-description {
+
         padding: 7px !important;
+
         p {
-            font-size:  0.65rem;
+            font-size: 0.65rem;
         }
     }
-    .name-wrapper{
-        p{
+
+    .name-wrapper {
+        p {
             font-size: 1.1rem;
             padding-left: 5px;
             padding-right: 5px;
@@ -198,30 +124,34 @@
     }
 }
 
-@media screen and (min-width:300px) and (max-width:325px){
-    .nothing{
-        p{
-            top:30%
+@media screen and (min-width:300px) and (max-width:325px) {
+    .nothing {
+        p {
+            top: 30%
         }
     }
 
-    .item-first-wrapper{
+    .card {
         height: 12rem;
-        width: 8rem;
     }
-    .card-wrapper{
-        height:12rem;
+
+    .card-img {
+        max-width: 8rem;
     }
-    .card-description{
-        
+
+    .card-description {
+
         padding: 5px !important;
+
         p {
-            font-size:  0.5rem;
+            font-size: 0.5rem;
         }
     }
-    .name-wrapper{
+
+    .name-wrapper {
         padding: 5px !important;
-        p{
+
+        p {
             font-size: 1rem;
             margin-bottom: 0;
         }
@@ -229,24 +159,28 @@
 }
 
 
-@media screen and (min-width:0px) and (max-width:299px){
-    .item-first-wrapper{
+@media screen and (min-width:0px) and (max-width:299px) {
+    .card {
         height: 10rem;
-        width: 6rem;
     }
-    .card-wrapper{
-        height:10rem;
+
+    .card-img {
+        max-width: 6.5rem;
     }
-    .card-description{
-        
+
+    .card-description {
+
         padding: 5px !important;
+
         p {
-            font-size:  0.5rem;
+            font-size: 0.5rem;
         }
     }
-    .name-wrapper{
+
+    .name-wrapper {
         padding: 5px !important;
-        p{
+
+        p {
             font-size: 1rem;
             margin-bottom: 0;
         }

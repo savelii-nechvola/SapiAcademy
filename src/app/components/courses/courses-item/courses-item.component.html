@@ -1,48 +1,38 @@
-<section class="card-wrapper">
-    <div class="card">
-        <div class="wrapper-course-item">
-            <div class="front">
-                <div class="item-first-wrapper"
-                    [ngStyle]="{'background': coursesItem.isDark == true ? darkBack : lightBack}">
-                    <div *ngIf="coursesItem.name!=null" class="name-wrapper pt-4 h-25">
-                        <p>
-                            {{coursesItem.name}}
-                        </p>
-                    </div>
-                    <div *ngIf="coursesItem.name!=null" class="image-wrapper">
-                        <img src={{coursesItem.image}} alt={{coursesItem.name}}>
-                    </div>
-
-                    <div class="nothing" *ngIf="coursesItem.name==null">
-                        <p class="text-center">...</p>
-                    </div>
-                </div>
+<div class="card" >
+    <div class="card-inner" [ngStyle]="{'background': coursesItem.isDark == true ? darkBack : lightBack}">
+        <div class="card-front">
+            <div *ngIf="coursesItem.name!=null" class="name-wrapper pt-4 text-center">
+                <p>
+                    {{coursesItem.name}}
+                </p>
             </div>
-            <div class="back">
-                <div class="item-first-wrapper"
-                    [ngStyle]="{'background': coursesItem.isDark == true ? darkBack : lightBack}">
-                    <div *ngIf="coursesItem.name!=null" class="name-wrapper pt-4">
-                        <p>
-                            {{coursesItem.name}}
-                        </p>
-                    </div>
+            <img alt="{{coursesItem.name}}" class="card-img img-fluid" src="{{coursesItem.image}}" />
 
-                    <div   class="pt-4 card-description px-4"  *ngIf="coursesItem.name!=null">
-                        <p>
-                            {{coursesItem.description}}
-                        </p>
-                    </div>
-                    <div *ngIf="coursesItem.name==null" class="name-wrapper pt-4">
-                        <p>
-                            Далі буде
-                        </p>
-                    </div>
-                    <div class="pt-5 card-description px-4" *ngIf="coursesItem.name==null">
-                        <p class="text-center">З часом будуть з'являтися нові курси!<br>Хочеш запропонувати додати програму навчання з певного предмету?<br> Напиши нам на пошту: <br>sapiacademy.orders @gmail.com</p>
-                    </div>
-                </div>
+            <div class="nothing" *ngIf="coursesItem.name==null">
+                <p class="text-center">...</p>
             </div>
         </div>
+        <div class="card-back">
+            <div *ngIf="coursesItem.name != null" class="name-wrapper pt-4 text-center">
+                <p>
+                    {{coursesItem.name}}
+                </p>
+            </div>
 
+            <div   class="pt-3 card-description px-3 text-break"  *ngIf="coursesItem.name != null">
+                <p>
+                    {{coursesItem.description}}
+                </p>
+            </div>
+
+            <div *ngIf="coursesItem.name == null" class="name-wrapper pt-4">
+                <p>
+                    Далі буде
+                </p>
+            </div>
+            <div class="pt-4 card-description px-4" *ngIf="coursesItem.name == null">
+                <p class="text-center">З часом будуть з'являтися нові курси!<br>Хочеш запропонувати додати програму навчання з певного предмету?<br> Напиши нам на пошту: <br>sapiacademy.orders @gmail.com</p>
+            </div>
+        </div>    
     </div>
-</section>
+</div>
