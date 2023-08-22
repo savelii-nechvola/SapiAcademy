@@ -72,3 +72,10 @@
     font-family: 'Roboto-Medium';
     src: url('../src/assets/fonts/Roboto-Medium.ttf');
 }
+
+
+    .w-xl-100{
+        @media (min-width:1200px) {
+        width: 100% !important;
+        }
+    }
