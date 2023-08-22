@@ -122,26 +122,68 @@
 }
 
 @media screen and (min-width:326px) and (max-width:449px) {
-    .nothing {
-        p {
-            top: 40%
-        }
+    .card{
+        height: 20rem;
+        display: flex;
+        align-items: center;
     }
-
-    .card {
-        height: 15rem;
+    .card-inner{
+        
+        width: 12rem;
     }
 
     .card-img {
         max-width: 10rem;
+        padding-top: 60px;
+    }
+    .card-description{
+        p{
+            font-size: 13px;
+        }
     }
 
-    .card-description {
-
-        padding: 7px !important;
-
+    .name-wrapper {
         p {
-            font-size: 0.65rem;
+            font-size: 1.1rem;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 0;
+        }
+    }
+    .nothing {
+        p {
+            top: 30%
+        }
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:325px) {
+    .nothing {
+        p {
+            top: 25%
+        }
+    }
+    #nothing-text{
+        font-size: 9.5px;
+        margin-top: -10px;
+    }
+    .card{
+        height: 15rem;
+        display: flex;
+        align-items: center;
+    }
+    .card-inner{
+        
+        width: 9rem;
+    }
+
+    .card-img {
+        max-width: 7rem;
+        padding-top: 30px;
+    }
+    .card-description{
+        p{
+            font-size: 12px;
         }
     }
 
@@ -155,65 +197,14 @@
     }
 }
 
-@media screen and (min-width:300px) and (max-width:325px) {
-    .nothing {
-        p {
-            top: 30%
-        }
+
+
+@media screen and (min-width:450px) and (max-width:575px) {
+    .card{
+        height: 30rem;
     }
-
-    .card {
-        height: 12rem;
-    }
-
-    .card-img {
-        max-width: 8rem;
-    }
-
-    .card-description {
-
-        padding: 5px !important;
-
-        p {
-            font-size: 0.5rem;
-        }
-    }
-
-    .name-wrapper {
-        padding: 5px !important;
-
-        p {
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
-    }
-}
-
-
-@media screen and (min-width:0px) and (max-width:299px) {
-    .card {
-        height: 10rem;
-    }
-
-    .card-img {
-        max-width: 6.5rem;
-    }
-
-    .card-description {
-
-        padding: 5px !important;
-
-        p {
-            font-size: 0.5rem;
-        }
-    }
-
-    .name-wrapper {
-        padding: 5px !important;
-
-        p {
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
+    .card-inner{
+        
+        width: 18rem;
     }
 }
