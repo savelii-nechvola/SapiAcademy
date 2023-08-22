@@ -21,44 +21,58 @@ export class LecturersComponent implements AfterViewInit {
 
         this.lecturers = [
             {
-                name: "Єгор",
-                surname: "Костін",
-                midname: "Романович",
-                exp: 1,
+                name: "Кирило",
+                surname: "Коляда",
+                midname: "Дмитрович",
+                exp: 5,
                 sex: true,
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non purus porta, aliquam nisi eu, dapibus justo. Phasellus non pellentesque metus. Cras in est convallis, volutpat urna sit amet, sagittis odio. Aliquam erat volutpat. Vestibulum a rhoncus libero. Duis feugiat nisl ut arcu porta, non accumsan quam commodo. Aenean eget turpis eu ex facilisis placerat. Donec in laoreet tortor.",
-                courses: ["Sexology"],
+                description: "Протягом 5 років допомагаю учням у розумінні, а не 'зазубрюванні' хімії, біології та математики. Заняття проходять за персональною програмою, яка враховує індивідуальні побажання та особливості кожного учня. Під час занять Ви не побачите 'стандартне вичитування' матеріалу зі слайдів! Програма побудована навколо спілкування з учнем, що дозволяє ефективніше виявити 'прогалини' та виправити їх. Завдяки цьому досягаються найвищі результати!",
+                courses: ["Хімія","Біологія","Математика"],
                 certificate: [
                     {
-                        name: "Technologies of High-performance Computing",
-                        year: "2022",
-                        image: ["../../../assets/Lecturers/Certificates/Certificate-Savelii_Nechvola_pages-to-jpg-0001.jpg","../../../assets/Lecturers/Certificates/Certificate-Savelii_Nechvola_pages-to-jpg-0002.jpg"]
+                        name: "Public communication in science",
+                        year: "2020",
+                        image: ["../../../assets/Lecturers/Certificates/Kolyada/1.jpg"]
                     },
                     {
-                        name: "Not technologies of High-performance Computing",
-                        year: "2023",
-                        image: ["../../../assets/Lecturers/Certificates/Certificate-Savelii_Nechvola_pages-to-jpg-0002.jpg"]
+                        name: "The current state of development of world science",
+                        year: "2021",
+                        image: ["../../../assets/Lecturers/Certificates/Kolyada/2.jpg"]
+                    },{
+                        name: "Tendenze attuali della moderna ricerca scientifica",
+                        year: "2020",
+                        image: ["../../../assets/Lecturers/Certificates/Kolyada/3.jpg"]
                     }
                 ],
-                image: "../../../assets/Lecturers/Yehor.jpg",
+                image: "../../../assets/Lecturers/Kolyada.jpg",
                 isOpenCert: false
             },
             {
-                name: "Yura",
-                surname: "Misher",
-                midname: "Романович",
-                exp: 35,
-                sex: true,
-                description: "Mice kent and winston",
-                courses: ["Pidorasology"],
+                name: "Олена",
+                surname: "Лактіонова",
+                midname: "Ігорівна",
+                exp: 5,
+                sex: false,
+                description: "У своїх заняттях я роблю ухил на практику і розуміння предмета.  Самі заняття проходять у легкій та доступній формі. Початковий рівень знань - не має значення. Індивідуальний підхід до кожного учня. Систематичне повторення і закріплення матеріалу. Після кожного заняття Ви отримаєте конспект по темі уроку у електронному форматі. Допомагаю як просто підтягнути оцінки з предметів, так і підготуватись до НМТ/ЗНО. Чекаю Вас на своїх заняттях.",
+                courses: ["Хімія","Біологія"],
                 certificate: [
                     {
-                        name: "Technologies of High-performance Computing",
-                        year: "2022",
-                        image: ["../../../assets/Lecturers/Certificates/Yura.jpg"]
+                        name: "Formation of innovative potential of world science",
+                        year: "2021",
+                        image: ["../../../assets/Lecturers/Certificates/Laktionova/1.jpg"]
+                    },
+                    {
+                        name: "Public communication in science",
+                        year: "2020",
+                        image: ["../../../assets/Lecturers/Certificates/Laktionova/2.jpg"]
+                    },
+                    {
+                        name: "Theoretical and empirical scientific research",
+                        year: "2023",
+                        image: ["../../../assets/Lecturers/Certificates/Laktionova/3.jpg"]
                     }
                 ],
-                image: "../../../assets/Lecturers/BestLecturer.jpg",
+                image: "../../../assets/Lecturers/Laktionova.jpg",
                 isOpenCert: false
             },
         ];

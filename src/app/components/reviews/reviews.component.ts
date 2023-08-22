@@ -15,27 +15,27 @@ export class ReviewsComponent {
     this.ReviewsList = [
       {
         rate:4.5,
-        comment:"Lorem ipsum dolor sit amet. Est ipsam voluptatibus ut culpa similique in rerum blanditiis qui harum voluptates? "
+        comment:"Хочу подякувати Sapi Academy за якісну підготовку до НМТ з української мови, математики та біології. Як і хотіла, вступила до НМУ імені О.О. Богомольця, дякую!"
       },
       {
         rate:5,
-        comment:"Lorem ipsum dolor sit amet. Est ipsam voluptatibus ut culpa similique in rerum blanditiis qui harum voluptates? "
+        comment:"Індивідуальний підхід, за досить короткий час змогли підтягнути математику."
       },
       {
         rate:5,
-        comment:"Lorem ipsum dolor sit amet. Est ipsam voluptatibus ut culpa similique in rerum blanditiis qui harum voluptates? "
+        comment:"Кирило Дмитрович - гарний репетитор, виконував з ним роботу, пояснює зрозуміло, допоміг здати все в короткі терміни, головне, що все правильно!"
       },
       {
         rate:5,
-        comment:"Lorem ipsum dolor sit amet. Est ipsam voluptatibus ut culpa similique in rerum blanditiis qui harum voluptates? "
+        comment:"Щиро дякую за те, що в мінімальний час, який залишився до НМТ, Савелій Іванович пропрацював з донькою. Репетитор, який викладається 100% і робить все можливе і неможливе для досягнення результату."
       },
       {
         rate:5,
-        comment:"Lorem ipsum dolor sit amet. Est ipsam voluptatibus ut culpa similique in rerum blanditiis qui harum voluptates? "
+        comment:"Репетитори Sapi Academy - талановиті та віддані професіонали своєї справи. Вони добре володіють предметом, завжди готові допомогти та пояснити матеріал. Дякую за допомогу."
       },
       {
         rate:5,
-        comment:"Lorem ipsum dolor sit amet. Est ipsam voluptatibus ut culpa similique in rerum blanditiis qui harum voluptates? "
+        comment:"Олена Ігорівна чудовий репетитор, за невеликий проміжок часу суттєво покращила мій рівень знань з хімії, змістовні уроки і зрозуміла подача матеріалу."
       },
     ]
   }
