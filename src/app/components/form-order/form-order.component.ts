@@ -13,6 +13,7 @@ export class FormOrderComponent {
   theme !: Observable<boolean>
   orderForm: FormGroup;
   subjects = ['Physic', 'Chemistry', 'Biology', 'Ukrainian', 'Math', 'Programming', 'History'];
+  formsuccess = false;
   subjectNames: SubjectNames = {
     'Physic': 'Фізика',
     'Chemistry': 'Хімія',
@@ -51,7 +52,11 @@ export class FormOrderComponent {
     this.formSubmitted = true;
     if (this.orderForm.valid) {
       this.mailSender.SendTelegram(this.CreateMessage());
+      this.formsuccess = true;
     } 
+  }
+  formsuccesschanger(){
+    this.formsuccess = false
   }
   CreateMessage() : string{
     const message = `${this.orderForm.controls['surname'].value} ${this.orderForm.controls['name'].value}
