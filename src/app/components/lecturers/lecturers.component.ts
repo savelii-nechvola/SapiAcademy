@@ -1,9 +1,10 @@
 import { Dialog } from '@angular/cdk/dialog';
-import { AfterViewInit, Component, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StateService } from 'src/app/services/state.service';
 import { LecturersModalWindowComponent } from './lecturers-modal-window/lecturers-modal-window.component';
 import { BlockScrollStrategy } from '@angular/cdk/overlay';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 @Component({
     selector: 'app-lecturers',
     templateUrl: './lecturers.component.html',
@@ -13,7 +14,8 @@ import { BlockScrollStrategy } from '@angular/cdk/overlay';
 export class LecturersComponent implements AfterViewInit {
     theme !: Observable<boolean>
     lecturers !: LecturerItem[]
-
+    @ViewChild('carousel') carousel!:NgbCarousel
+    posIni: any;
 
 
     constructor(private stateService: StateService, private dialog: Dialog) {
@@ -79,6 +81,12 @@ export class LecturersComponent implements AfterViewInit {
 
     }
 
+    move(pos:number) {
+      const offset = this.posIni - pos;
+      if (offset < -100) this.carousel.prev()
+  
+      if (offset > 100) this.carousel.next();
+    }
     OpenCloseCert(lect: LecturerItem): void {
         lect.isOpenCert = !lect.isOpenCert
     }
