@@ -152,10 +152,12 @@
 
     path {
         fill: #1D3637;
+        transition: all 0.2s ease-in-out;
     }
 
     p {
         color: #1D3637;
+        transition: all 0.2s ease-in-out;
     }
 
     &:hover {
@@ -239,7 +241,7 @@
     }
 
     .ToOrderForm-dark,
-    .ToOrderForm-dark {
+    .ToOrderForm-light {
         margin: 50px 0 50px 0;
     }
 }
@@ -287,7 +289,7 @@
     }
 
     .ToOrderForm-dark,
-    .ToOrderForm-dark {
+    .ToOrderForm-light {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
