@@ -23,6 +23,30 @@ export class LecturersComponent implements AfterViewInit {
 
         this.lecturers = [
             {
+                name: "Савелій",
+                surname: "Нечвола",
+                midname: "Іванович",
+                exp: 3,
+                sex: true,
+                description: "Протягом 4 років надаю експертну допомогу з математики, фізики та основ програмування. Мої заняття з кожного предмету проходять по авторському курсу, який допомагає виявити прогалини в знаннях та дає змогу учню зрозуміти предмет, а не просто зазубрити матеріал напам'ять та дає змогу розкрити прихований потенціал учня.  Програма навчання вдосконалюється з кожним проведеним уроком, що приводить до збільшення ефективності кожного окремого заняття. Під час постійного контакту з учнями мною виділяються особливості мислення кожного студента, що приводить до максимізації  продуктивності процесу навчання. Насамперед, моєю метою є навчити учнів мислити логічно, адже вивчення цих предметів полягає в спроможності дитини підлаштуватися під всі завдання, які можуть зустрітися в майбутньому.",
+                courses: ["Математика","Фізика", "Програмування"],
+                certificate: [
+                    {
+                        name: "Digital Ukraine. UX/UI Development (Bachelor)",
+                        year: "2023",
+                        image: ["../../../assets/Lecturers/Certificates/Nechvola/first-1.jpg","../../../assets/Lecturers/Certificates/Nechvola/first-2.jpg"]
+                    },
+                    {
+                        name: "Digital Ukraine. Technologies of high-perfomance computing (Bachelor)",
+                        year: "2022",
+                        image: ["../../../assets/Lecturers/Certificates/Nechvola/second-1.jpg","../../../assets/Lecturers/Certificates/Nechvola/second-2.jpg"]
+                    },
+                    
+                ],
+                image: "../../../assets/Lecturers/Savelii.jpg",
+                isOpenCert: false
+            },
+            {
                 name: "Кирило",
                 surname: "Коляда",
                 midname: "Дмитрович",
@@ -76,7 +100,7 @@ export class LecturersComponent implements AfterViewInit {
                 ],
                 image: "../../../assets/Lecturers/Laktionova.jpg",
                 isOpenCert: false
-            },
+            }
         ];
 
     }
