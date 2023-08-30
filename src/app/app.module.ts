@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToStartComponent } from './components/to-start/to-start.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PriceInfoComponent } from './components/price-info/price-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReviewsComponent,
     FormOrderComponent,
     ToStartComponent,
-    FooterComponent
+    FooterComponent,
+    PriceInfoComponent
   ],
   imports: [
     BrowserModule,
