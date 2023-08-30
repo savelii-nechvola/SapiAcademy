@@ -1,0 +1,24 @@
+<section>
+    <div class="my-5 d-flex flex-column align-items-center">
+        <div class="bold-font-price my-4" [ngClass]="{'dark-font' : (theme | async), 'light-font' : !(theme | async)}">
+            <p>
+                Привіт! Ласкаво просимо до наших навчальних курсів. Незалежно від того, який предмет вас цікавить, у нас є для вас гарний варіант. Ми пропонуємо однакову ціну за всі курси - всього 300 грн за годину заняття.
+            </p>
+        </div>
+        <div class="my-3" [ngClass]="{'dark-line' : (theme | async), 'light-line' : !(theme | async)}"></div>
+        <div class="reg-font-price mt-4" [ngClass]="{'dark-font' : (theme | async), 'light-font' : !(theme | async)}">
+            <p class="mb-5">
+                Пробне Заняття: Безкоштовно
+            </p>
+            <p>
+                Перед тим, як приймати рішення, ми пропонуємо вам взяти участь у нашому безкоштовному пробному занятті. Ви зможете ознайомитися зі структурою курсу, зустрітися з викладачем та зрозуміти, як наші заняття відповідають вашим потребам.
+            </p>
+        </div>
+        <div class="my-5" [ngClass]="{'dark-line' : (theme | async), 'light-line' : !(theme | async)}"></div>
+        <div class="reg-font-price my-4" [ngClass]="{'dark-font' : (theme | async), 'light-font' : !(theme | async)}">
+            <p>
+                Нехай ваша освітня подорож буде цікавою та плідною! Не сумнівайтеся зв'язатися з нами, якщо у вас є будь-які питання.
+            </p>
+        </div>
+    </div>
+</section>

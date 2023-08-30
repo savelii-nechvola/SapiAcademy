@@ -1,0 +1,54 @@
+.dark-line {
+    border-bottom: solid 1px hsla(83, 80%, 35%, 0.6);
+    width: 70%;
+}
+
+.light-line {
+    border-bottom: solid 1px hsla(238, 40%, 62%, 0.6);
+    width: 70%;
+}
+
+.dark-font {
+
+    color: white;
+}
+
+.light-font {
+
+    color: #1D3637;
+}
+
+
+.reg-font-price {
+    text-align: center;
+
+    p {
+        font-family: 'KyivSerif-Regular3';
+        font-size: 24px;
+    }
+}
+
+.bold-font-price {
+    text-align: center;
+
+    p {
+        font-family: 'KyivTypeSerif-Medium';
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+
+@media (max-width:700px) {
+    .bold-font-price{
+        p{
+            font-size:20px;
+            line-height: 32px;
+        }
+    }
+    .reg-font-price{
+        p{
+            font-size: 16px;
+        }
+    }
+}
